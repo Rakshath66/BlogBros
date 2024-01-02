@@ -14,7 +14,7 @@ const { urlencoded } = require('body-parser');
 const {checkForAuthenticationCookie}=require("./middlewares/authentication");
 
 const mongoose=require("mongoose");
-mongoose.connect(process.env.MONGO_URL).then(()=> console.log("Database Created!")).catch(err => console.log(err));
+mongoose.connect(process.env.MONGO_URI).then(()=> console.log("Database Created!")).catch(err => console.log(err));
 
 const PORT=process.env.PORT || 8000;
 
